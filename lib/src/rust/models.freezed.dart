@@ -923,6 +923,264 @@ as bool,
 }
 
 /// @nodoc
+mixin _$DescriptionHash {
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DescriptionHash);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'DescriptionHash()';
+}
+
+
+}
+
+/// @nodoc
+class $DescriptionHashCopyWith<$Res>  {
+$DescriptionHashCopyWith(DescriptionHash _, $Res Function(DescriptionHash) __);
+}
+
+
+/// Adds pattern-matching-related methods to [DescriptionHash].
+extension DescriptionHashPatterns on DescriptionHash {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( DescriptionHash_UseDescription value)?  useDescription,TResult Function( DescriptionHash_Custom value)?  custom,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case DescriptionHash_UseDescription() when useDescription != null:
+return useDescription(_that);case DescriptionHash_Custom() when custom != null:
+return custom(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( DescriptionHash_UseDescription value)  useDescription,required TResult Function( DescriptionHash_Custom value)  custom,}){
+final _that = this;
+switch (_that) {
+case DescriptionHash_UseDescription():
+return useDescription(_that);case DescriptionHash_Custom():
+return custom(_that);}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( DescriptionHash_UseDescription value)?  useDescription,TResult? Function( DescriptionHash_Custom value)?  custom,}){
+final _that = this;
+switch (_that) {
+case DescriptionHash_UseDescription() when useDescription != null:
+return useDescription(_that);case DescriptionHash_Custom() when custom != null:
+return custom(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  useDescription,TResult Function( String hash)?  custom,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case DescriptionHash_UseDescription() when useDescription != null:
+return useDescription();case DescriptionHash_Custom() when custom != null:
+return custom(_that.hash);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  useDescription,required TResult Function( String hash)  custom,}) {final _that = this;
+switch (_that) {
+case DescriptionHash_UseDescription():
+return useDescription();case DescriptionHash_Custom():
+return custom(_that.hash);}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  useDescription,TResult? Function( String hash)?  custom,}) {final _that = this;
+switch (_that) {
+case DescriptionHash_UseDescription() when useDescription != null:
+return useDescription();case DescriptionHash_Custom() when custom != null:
+return custom(_that.hash);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+
+
+class DescriptionHash_UseDescription extends DescriptionHash {
+  const DescriptionHash_UseDescription(): super._();
+  
+
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DescriptionHash_UseDescription);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'DescriptionHash.useDescription()';
+}
+
+
+}
+
+
+
+
+/// @nodoc
+
+
+class DescriptionHash_Custom extends DescriptionHash {
+  const DescriptionHash_Custom({required this.hash}): super._();
+  
+
+ final  String hash;
+
+/// Create a copy of DescriptionHash
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$DescriptionHash_CustomCopyWith<DescriptionHash_Custom> get copyWith => _$DescriptionHash_CustomCopyWithImpl<DescriptionHash_Custom>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DescriptionHash_Custom&&(identical(other.hash, hash) || other.hash == hash));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,hash);
+
+@override
+String toString() {
+  return 'DescriptionHash.custom(hash: $hash)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $DescriptionHash_CustomCopyWith<$Res> implements $DescriptionHashCopyWith<$Res> {
+  factory $DescriptionHash_CustomCopyWith(DescriptionHash_Custom value, $Res Function(DescriptionHash_Custom) _then) = _$DescriptionHash_CustomCopyWithImpl;
+@useResult
+$Res call({
+ String hash
+});
+
+
+
+
+}
+/// @nodoc
+class _$DescriptionHash_CustomCopyWithImpl<$Res>
+    implements $DescriptionHash_CustomCopyWith<$Res> {
+  _$DescriptionHash_CustomCopyWithImpl(this._self, this._then);
+
+  final DescriptionHash_Custom _self;
+  final $Res Function(DescriptionHash_Custom) _then;
+
+/// Create a copy of DescriptionHash
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? hash = null,}) {
+  return _then(DescriptionHash_Custom(
+hash: null == hash ? _self.hash : hash // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+/// @nodoc
 mixin _$GetPaymentRequest {
 
 
@@ -1258,7 +1516,7 @@ extension InputTypePatterns on InputType {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( InputType_BitcoinAddress value)?  bitcoinAddress,TResult Function( InputType_LiquidAddress value)?  liquidAddress,TResult Function( InputType_Bolt11 value)?  bolt11,TResult Function( InputType_Bolt12Offer value)?  bolt12Offer,TResult Function( InputType_NodeId value)?  nodeId,TResult Function( InputType_Url value)?  url,TResult Function( InputType_LnUrlPay value)?  lnUrlPay,TResult Function( InputType_LnUrlWithdraw value)?  lnUrlWithdraw,TResult Function( InputType_LnUrlAuth value)?  lnUrlAuth,TResult Function( InputType_LnUrlError value)?  lnUrlError,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( InputType_BitcoinAddress value)?  bitcoinAddress,TResult Function( InputType_LiquidAddress value)?  liquidAddress,TResult Function( InputType_Bolt11 value)?  bolt11,TResult Function( InputType_Bolt12Offer value)?  bolt12Offer,TResult Function( InputType_NodeId value)?  nodeId,TResult Function( InputType_Url value)?  url,TResult Function( InputType_LnUrlPay value)?  lnUrlPay,TResult Function( InputType_LnUrlWithdraw value)?  lnUrlWithdraw,TResult Function( InputType_LnUrlAuth value)?  lnUrlAuth,TResult Function( InputType_LnUrlError value)?  lnUrlError,TResult Function( InputType_NostrWalletConnectUri value)?  nostrWalletConnectUri,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case InputType_BitcoinAddress() when bitcoinAddress != null:
@@ -1271,7 +1529,8 @@ return url(_that);case InputType_LnUrlPay() when lnUrlPay != null:
 return lnUrlPay(_that);case InputType_LnUrlWithdraw() when lnUrlWithdraw != null:
 return lnUrlWithdraw(_that);case InputType_LnUrlAuth() when lnUrlAuth != null:
 return lnUrlAuth(_that);case InputType_LnUrlError() when lnUrlError != null:
-return lnUrlError(_that);case _:
+return lnUrlError(_that);case InputType_NostrWalletConnectUri() when nostrWalletConnectUri != null:
+return nostrWalletConnectUri(_that);case _:
   return orElse();
 
 }
@@ -1289,7 +1548,7 @@ return lnUrlError(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( InputType_BitcoinAddress value)  bitcoinAddress,required TResult Function( InputType_LiquidAddress value)  liquidAddress,required TResult Function( InputType_Bolt11 value)  bolt11,required TResult Function( InputType_Bolt12Offer value)  bolt12Offer,required TResult Function( InputType_NodeId value)  nodeId,required TResult Function( InputType_Url value)  url,required TResult Function( InputType_LnUrlPay value)  lnUrlPay,required TResult Function( InputType_LnUrlWithdraw value)  lnUrlWithdraw,required TResult Function( InputType_LnUrlAuth value)  lnUrlAuth,required TResult Function( InputType_LnUrlError value)  lnUrlError,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( InputType_BitcoinAddress value)  bitcoinAddress,required TResult Function( InputType_LiquidAddress value)  liquidAddress,required TResult Function( InputType_Bolt11 value)  bolt11,required TResult Function( InputType_Bolt12Offer value)  bolt12Offer,required TResult Function( InputType_NodeId value)  nodeId,required TResult Function( InputType_Url value)  url,required TResult Function( InputType_LnUrlPay value)  lnUrlPay,required TResult Function( InputType_LnUrlWithdraw value)  lnUrlWithdraw,required TResult Function( InputType_LnUrlAuth value)  lnUrlAuth,required TResult Function( InputType_LnUrlError value)  lnUrlError,required TResult Function( InputType_NostrWalletConnectUri value)  nostrWalletConnectUri,}){
 final _that = this;
 switch (_that) {
 case InputType_BitcoinAddress():
@@ -1302,7 +1561,8 @@ return url(_that);case InputType_LnUrlPay():
 return lnUrlPay(_that);case InputType_LnUrlWithdraw():
 return lnUrlWithdraw(_that);case InputType_LnUrlAuth():
 return lnUrlAuth(_that);case InputType_LnUrlError():
-return lnUrlError(_that);}
+return lnUrlError(_that);case InputType_NostrWalletConnectUri():
+return nostrWalletConnectUri(_that);}
 }
 /// A variant of `map` that fallback to returning `null`.
 ///
@@ -1316,7 +1576,7 @@ return lnUrlError(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( InputType_BitcoinAddress value)?  bitcoinAddress,TResult? Function( InputType_LiquidAddress value)?  liquidAddress,TResult? Function( InputType_Bolt11 value)?  bolt11,TResult? Function( InputType_Bolt12Offer value)?  bolt12Offer,TResult? Function( InputType_NodeId value)?  nodeId,TResult? Function( InputType_Url value)?  url,TResult? Function( InputType_LnUrlPay value)?  lnUrlPay,TResult? Function( InputType_LnUrlWithdraw value)?  lnUrlWithdraw,TResult? Function( InputType_LnUrlAuth value)?  lnUrlAuth,TResult? Function( InputType_LnUrlError value)?  lnUrlError,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( InputType_BitcoinAddress value)?  bitcoinAddress,TResult? Function( InputType_LiquidAddress value)?  liquidAddress,TResult? Function( InputType_Bolt11 value)?  bolt11,TResult? Function( InputType_Bolt12Offer value)?  bolt12Offer,TResult? Function( InputType_NodeId value)?  nodeId,TResult? Function( InputType_Url value)?  url,TResult? Function( InputType_LnUrlPay value)?  lnUrlPay,TResult? Function( InputType_LnUrlWithdraw value)?  lnUrlWithdraw,TResult? Function( InputType_LnUrlAuth value)?  lnUrlAuth,TResult? Function( InputType_LnUrlError value)?  lnUrlError,TResult? Function( InputType_NostrWalletConnectUri value)?  nostrWalletConnectUri,}){
 final _that = this;
 switch (_that) {
 case InputType_BitcoinAddress() when bitcoinAddress != null:
@@ -1329,7 +1589,8 @@ return url(_that);case InputType_LnUrlPay() when lnUrlPay != null:
 return lnUrlPay(_that);case InputType_LnUrlWithdraw() when lnUrlWithdraw != null:
 return lnUrlWithdraw(_that);case InputType_LnUrlAuth() when lnUrlAuth != null:
 return lnUrlAuth(_that);case InputType_LnUrlError() when lnUrlError != null:
-return lnUrlError(_that);case _:
+return lnUrlError(_that);case InputType_NostrWalletConnectUri() when nostrWalletConnectUri != null:
+return nostrWalletConnectUri(_that);case _:
   return null;
 
 }
@@ -1346,7 +1607,7 @@ return lnUrlError(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( BitcoinAddressData address)?  bitcoinAddress,TResult Function( LiquidAddressData address)?  liquidAddress,TResult Function( LNInvoice invoice)?  bolt11,TResult Function( LNOffer offer,  String? bip353Address)?  bolt12Offer,TResult Function( String nodeId)?  nodeId,TResult Function( String url)?  url,TResult Function( LnUrlPayRequestData data,  String? bip353Address)?  lnUrlPay,TResult Function( LnUrlWithdrawRequestData data)?  lnUrlWithdraw,TResult Function( LnUrlAuthRequestData data)?  lnUrlAuth,TResult Function( LnUrlErrorData data)?  lnUrlError,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( BitcoinAddressData address)?  bitcoinAddress,TResult Function( LiquidAddressData address)?  liquidAddress,TResult Function( LNInvoice invoice)?  bolt11,TResult Function( LNOffer offer,  String? bip353Address)?  bolt12Offer,TResult Function( String nodeId)?  nodeId,TResult Function( String url)?  url,TResult Function( LnUrlPayRequestData data,  String? bip353Address)?  lnUrlPay,TResult Function( LnUrlWithdrawRequestData data)?  lnUrlWithdraw,TResult Function( LnUrlAuthRequestData data)?  lnUrlAuth,TResult Function( LnUrlErrorData data)?  lnUrlError,TResult Function( NostrWalletConnectUri data)?  nostrWalletConnectUri,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case InputType_BitcoinAddress() when bitcoinAddress != null:
 return bitcoinAddress(_that.address);case InputType_LiquidAddress() when liquidAddress != null:
@@ -1358,7 +1619,8 @@ return url(_that.url);case InputType_LnUrlPay() when lnUrlPay != null:
 return lnUrlPay(_that.data,_that.bip353Address);case InputType_LnUrlWithdraw() when lnUrlWithdraw != null:
 return lnUrlWithdraw(_that.data);case InputType_LnUrlAuth() when lnUrlAuth != null:
 return lnUrlAuth(_that.data);case InputType_LnUrlError() when lnUrlError != null:
-return lnUrlError(_that.data);case _:
+return lnUrlError(_that.data);case InputType_NostrWalletConnectUri() when nostrWalletConnectUri != null:
+return nostrWalletConnectUri(_that.data);case _:
   return orElse();
 
 }
@@ -1376,7 +1638,7 @@ return lnUrlError(_that.data);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( BitcoinAddressData address)  bitcoinAddress,required TResult Function( LiquidAddressData address)  liquidAddress,required TResult Function( LNInvoice invoice)  bolt11,required TResult Function( LNOffer offer,  String? bip353Address)  bolt12Offer,required TResult Function( String nodeId)  nodeId,required TResult Function( String url)  url,required TResult Function( LnUrlPayRequestData data,  String? bip353Address)  lnUrlPay,required TResult Function( LnUrlWithdrawRequestData data)  lnUrlWithdraw,required TResult Function( LnUrlAuthRequestData data)  lnUrlAuth,required TResult Function( LnUrlErrorData data)  lnUrlError,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( BitcoinAddressData address)  bitcoinAddress,required TResult Function( LiquidAddressData address)  liquidAddress,required TResult Function( LNInvoice invoice)  bolt11,required TResult Function( LNOffer offer,  String? bip353Address)  bolt12Offer,required TResult Function( String nodeId)  nodeId,required TResult Function( String url)  url,required TResult Function( LnUrlPayRequestData data,  String? bip353Address)  lnUrlPay,required TResult Function( LnUrlWithdrawRequestData data)  lnUrlWithdraw,required TResult Function( LnUrlAuthRequestData data)  lnUrlAuth,required TResult Function( LnUrlErrorData data)  lnUrlError,required TResult Function( NostrWalletConnectUri data)  nostrWalletConnectUri,}) {final _that = this;
 switch (_that) {
 case InputType_BitcoinAddress():
 return bitcoinAddress(_that.address);case InputType_LiquidAddress():
@@ -1388,7 +1650,8 @@ return url(_that.url);case InputType_LnUrlPay():
 return lnUrlPay(_that.data,_that.bip353Address);case InputType_LnUrlWithdraw():
 return lnUrlWithdraw(_that.data);case InputType_LnUrlAuth():
 return lnUrlAuth(_that.data);case InputType_LnUrlError():
-return lnUrlError(_that.data);}
+return lnUrlError(_that.data);case InputType_NostrWalletConnectUri():
+return nostrWalletConnectUri(_that.data);}
 }
 /// A variant of `when` that fallback to returning `null`
 ///
@@ -1402,7 +1665,7 @@ return lnUrlError(_that.data);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( BitcoinAddressData address)?  bitcoinAddress,TResult? Function( LiquidAddressData address)?  liquidAddress,TResult? Function( LNInvoice invoice)?  bolt11,TResult? Function( LNOffer offer,  String? bip353Address)?  bolt12Offer,TResult? Function( String nodeId)?  nodeId,TResult? Function( String url)?  url,TResult? Function( LnUrlPayRequestData data,  String? bip353Address)?  lnUrlPay,TResult? Function( LnUrlWithdrawRequestData data)?  lnUrlWithdraw,TResult? Function( LnUrlAuthRequestData data)?  lnUrlAuth,TResult? Function( LnUrlErrorData data)?  lnUrlError,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( BitcoinAddressData address)?  bitcoinAddress,TResult? Function( LiquidAddressData address)?  liquidAddress,TResult? Function( LNInvoice invoice)?  bolt11,TResult? Function( LNOffer offer,  String? bip353Address)?  bolt12Offer,TResult? Function( String nodeId)?  nodeId,TResult? Function( String url)?  url,TResult? Function( LnUrlPayRequestData data,  String? bip353Address)?  lnUrlPay,TResult? Function( LnUrlWithdrawRequestData data)?  lnUrlWithdraw,TResult? Function( LnUrlAuthRequestData data)?  lnUrlAuth,TResult? Function( LnUrlErrorData data)?  lnUrlError,TResult? Function( NostrWalletConnectUri data)?  nostrWalletConnectUri,}) {final _that = this;
 switch (_that) {
 case InputType_BitcoinAddress() when bitcoinAddress != null:
 return bitcoinAddress(_that.address);case InputType_LiquidAddress() when liquidAddress != null:
@@ -1414,7 +1677,8 @@ return url(_that.url);case InputType_LnUrlPay() when lnUrlPay != null:
 return lnUrlPay(_that.data,_that.bip353Address);case InputType_LnUrlWithdraw() when lnUrlWithdraw != null:
 return lnUrlWithdraw(_that.data);case InputType_LnUrlAuth() when lnUrlAuth != null:
 return lnUrlAuth(_that.data);case InputType_LnUrlError() when lnUrlError != null:
-return lnUrlError(_that.data);case _:
+return lnUrlError(_that.data);case InputType_NostrWalletConnectUri() when nostrWalletConnectUri != null:
+return nostrWalletConnectUri(_that.data);case _:
   return null;
 
 }
@@ -2080,6 +2344,72 @@ class _$InputType_LnUrlErrorCopyWithImpl<$Res>
   return _then(InputType_LnUrlError(
 data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
 as LnUrlErrorData,
+  ));
+}
+
+
+}
+
+/// @nodoc
+
+
+class InputType_NostrWalletConnectUri extends InputType {
+  const InputType_NostrWalletConnectUri({required this.data}): super._();
+  
+
+ final  NostrWalletConnectUri data;
+
+/// Create a copy of InputType
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$InputType_NostrWalletConnectUriCopyWith<InputType_NostrWalletConnectUri> get copyWith => _$InputType_NostrWalletConnectUriCopyWithImpl<InputType_NostrWalletConnectUri>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is InputType_NostrWalletConnectUri&&(identical(other.data, data) || other.data == data));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,data);
+
+@override
+String toString() {
+  return 'InputType.nostrWalletConnectUri(data: $data)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $InputType_NostrWalletConnectUriCopyWith<$Res> implements $InputTypeCopyWith<$Res> {
+  factory $InputType_NostrWalletConnectUriCopyWith(InputType_NostrWalletConnectUri value, $Res Function(InputType_NostrWalletConnectUri) _then) = _$InputType_NostrWalletConnectUriCopyWithImpl;
+@useResult
+$Res call({
+ NostrWalletConnectUri data
+});
+
+
+
+
+}
+/// @nodoc
+class _$InputType_NostrWalletConnectUriCopyWithImpl<$Res>
+    implements $InputType_NostrWalletConnectUriCopyWith<$Res> {
+  _$InputType_NostrWalletConnectUriCopyWithImpl(this._self, this._then);
+
+  final InputType_NostrWalletConnectUri _self;
+  final $Res Function(InputType_NostrWalletConnectUri) _then;
+
+/// Create a copy of InputType
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
+  return _then(InputType_NostrWalletConnectUri(
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as NostrWalletConnectUri,
   ));
 }
 
@@ -3222,10 +3552,10 @@ return bitcoin(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String swapId,  String description,  int liquidExpirationBlockheight,  String? preimage,  String? invoice,  String? bolt12Offer,  String? paymentHash,  String? destinationPubkey,  LnUrlInfo? lnurlInfo,  String? bip353Address,  String? payerNote,  String? claimTxId,  String? refundTxId,  BigInt? refundTxAmountSat)?  lightning,TResult Function( String destination,  String description,  String assetId,  AssetInfo? assetInfo,  LnUrlInfo? lnurlInfo,  String? bip353Address,  String? payerNote)?  liquid,TResult Function( String swapId,  String bitcoinAddress,  String description,  bool autoAcceptedFees,  int liquidExpirationBlockheight,  int bitcoinExpirationBlockheight,  String? lockupTxId,  String? claimTxId,  String? refundTxId,  BigInt? refundTxAmountSat)?  bitcoin,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String swapId,  String description,  int liquidExpirationBlockheight,  String? preimage,  String? invoice,  String? bolt12Offer,  String? paymentHash,  String? destinationPubkey,  LnUrlInfo? lnurlInfo,  String? bip353Address,  String? payerNote,  String? claimTxId,  String? refundTxId,  BigInt? refundTxAmountSat,  int? settledAt)?  lightning,TResult Function( String destination,  String description,  String assetId,  AssetInfo? assetInfo,  LnUrlInfo? lnurlInfo,  String? bip353Address,  String? payerNote)?  liquid,TResult Function( String swapId,  String bitcoinAddress,  String description,  bool autoAcceptedFees,  int liquidExpirationBlockheight,  int bitcoinExpirationBlockheight,  String? lockupTxId,  String? claimTxId,  String? refundTxId,  BigInt? refundTxAmountSat)?  bitcoin,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case PaymentDetails_Lightning() when lightning != null:
-return lightning(_that.swapId,_that.description,_that.liquidExpirationBlockheight,_that.preimage,_that.invoice,_that.bolt12Offer,_that.paymentHash,_that.destinationPubkey,_that.lnurlInfo,_that.bip353Address,_that.payerNote,_that.claimTxId,_that.refundTxId,_that.refundTxAmountSat);case PaymentDetails_Liquid() when liquid != null:
+return lightning(_that.swapId,_that.description,_that.liquidExpirationBlockheight,_that.preimage,_that.invoice,_that.bolt12Offer,_that.paymentHash,_that.destinationPubkey,_that.lnurlInfo,_that.bip353Address,_that.payerNote,_that.claimTxId,_that.refundTxId,_that.refundTxAmountSat,_that.settledAt);case PaymentDetails_Liquid() when liquid != null:
 return liquid(_that.destination,_that.description,_that.assetId,_that.assetInfo,_that.lnurlInfo,_that.bip353Address,_that.payerNote);case PaymentDetails_Bitcoin() when bitcoin != null:
 return bitcoin(_that.swapId,_that.bitcoinAddress,_that.description,_that.autoAcceptedFees,_that.liquidExpirationBlockheight,_that.bitcoinExpirationBlockheight,_that.lockupTxId,_that.claimTxId,_that.refundTxId,_that.refundTxAmountSat);case _:
   return orElse();
@@ -3245,10 +3575,10 @@ return bitcoin(_that.swapId,_that.bitcoinAddress,_that.description,_that.autoAcc
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String swapId,  String description,  int liquidExpirationBlockheight,  String? preimage,  String? invoice,  String? bolt12Offer,  String? paymentHash,  String? destinationPubkey,  LnUrlInfo? lnurlInfo,  String? bip353Address,  String? payerNote,  String? claimTxId,  String? refundTxId,  BigInt? refundTxAmountSat)  lightning,required TResult Function( String destination,  String description,  String assetId,  AssetInfo? assetInfo,  LnUrlInfo? lnurlInfo,  String? bip353Address,  String? payerNote)  liquid,required TResult Function( String swapId,  String bitcoinAddress,  String description,  bool autoAcceptedFees,  int liquidExpirationBlockheight,  int bitcoinExpirationBlockheight,  String? lockupTxId,  String? claimTxId,  String? refundTxId,  BigInt? refundTxAmountSat)  bitcoin,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String swapId,  String description,  int liquidExpirationBlockheight,  String? preimage,  String? invoice,  String? bolt12Offer,  String? paymentHash,  String? destinationPubkey,  LnUrlInfo? lnurlInfo,  String? bip353Address,  String? payerNote,  String? claimTxId,  String? refundTxId,  BigInt? refundTxAmountSat,  int? settledAt)  lightning,required TResult Function( String destination,  String description,  String assetId,  AssetInfo? assetInfo,  LnUrlInfo? lnurlInfo,  String? bip353Address,  String? payerNote)  liquid,required TResult Function( String swapId,  String bitcoinAddress,  String description,  bool autoAcceptedFees,  int liquidExpirationBlockheight,  int bitcoinExpirationBlockheight,  String? lockupTxId,  String? claimTxId,  String? refundTxId,  BigInt? refundTxAmountSat)  bitcoin,}) {final _that = this;
 switch (_that) {
 case PaymentDetails_Lightning():
-return lightning(_that.swapId,_that.description,_that.liquidExpirationBlockheight,_that.preimage,_that.invoice,_that.bolt12Offer,_that.paymentHash,_that.destinationPubkey,_that.lnurlInfo,_that.bip353Address,_that.payerNote,_that.claimTxId,_that.refundTxId,_that.refundTxAmountSat);case PaymentDetails_Liquid():
+return lightning(_that.swapId,_that.description,_that.liquidExpirationBlockheight,_that.preimage,_that.invoice,_that.bolt12Offer,_that.paymentHash,_that.destinationPubkey,_that.lnurlInfo,_that.bip353Address,_that.payerNote,_that.claimTxId,_that.refundTxId,_that.refundTxAmountSat,_that.settledAt);case PaymentDetails_Liquid():
 return liquid(_that.destination,_that.description,_that.assetId,_that.assetInfo,_that.lnurlInfo,_that.bip353Address,_that.payerNote);case PaymentDetails_Bitcoin():
 return bitcoin(_that.swapId,_that.bitcoinAddress,_that.description,_that.autoAcceptedFees,_that.liquidExpirationBlockheight,_that.bitcoinExpirationBlockheight,_that.lockupTxId,_that.claimTxId,_that.refundTxId,_that.refundTxAmountSat);}
 }
@@ -3264,10 +3594,10 @@ return bitcoin(_that.swapId,_that.bitcoinAddress,_that.description,_that.autoAcc
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String swapId,  String description,  int liquidExpirationBlockheight,  String? preimage,  String? invoice,  String? bolt12Offer,  String? paymentHash,  String? destinationPubkey,  LnUrlInfo? lnurlInfo,  String? bip353Address,  String? payerNote,  String? claimTxId,  String? refundTxId,  BigInt? refundTxAmountSat)?  lightning,TResult? Function( String destination,  String description,  String assetId,  AssetInfo? assetInfo,  LnUrlInfo? lnurlInfo,  String? bip353Address,  String? payerNote)?  liquid,TResult? Function( String swapId,  String bitcoinAddress,  String description,  bool autoAcceptedFees,  int liquidExpirationBlockheight,  int bitcoinExpirationBlockheight,  String? lockupTxId,  String? claimTxId,  String? refundTxId,  BigInt? refundTxAmountSat)?  bitcoin,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String swapId,  String description,  int liquidExpirationBlockheight,  String? preimage,  String? invoice,  String? bolt12Offer,  String? paymentHash,  String? destinationPubkey,  LnUrlInfo? lnurlInfo,  String? bip353Address,  String? payerNote,  String? claimTxId,  String? refundTxId,  BigInt? refundTxAmountSat,  int? settledAt)?  lightning,TResult? Function( String destination,  String description,  String assetId,  AssetInfo? assetInfo,  LnUrlInfo? lnurlInfo,  String? bip353Address,  String? payerNote)?  liquid,TResult? Function( String swapId,  String bitcoinAddress,  String description,  bool autoAcceptedFees,  int liquidExpirationBlockheight,  int bitcoinExpirationBlockheight,  String? lockupTxId,  String? claimTxId,  String? refundTxId,  BigInt? refundTxAmountSat)?  bitcoin,}) {final _that = this;
 switch (_that) {
 case PaymentDetails_Lightning() when lightning != null:
-return lightning(_that.swapId,_that.description,_that.liquidExpirationBlockheight,_that.preimage,_that.invoice,_that.bolt12Offer,_that.paymentHash,_that.destinationPubkey,_that.lnurlInfo,_that.bip353Address,_that.payerNote,_that.claimTxId,_that.refundTxId,_that.refundTxAmountSat);case PaymentDetails_Liquid() when liquid != null:
+return lightning(_that.swapId,_that.description,_that.liquidExpirationBlockheight,_that.preimage,_that.invoice,_that.bolt12Offer,_that.paymentHash,_that.destinationPubkey,_that.lnurlInfo,_that.bip353Address,_that.payerNote,_that.claimTxId,_that.refundTxId,_that.refundTxAmountSat,_that.settledAt);case PaymentDetails_Liquid() when liquid != null:
 return liquid(_that.destination,_that.description,_that.assetId,_that.assetInfo,_that.lnurlInfo,_that.bip353Address,_that.payerNote);case PaymentDetails_Bitcoin() when bitcoin != null:
 return bitcoin(_that.swapId,_that.bitcoinAddress,_that.description,_that.autoAcceptedFees,_that.liquidExpirationBlockheight,_that.bitcoinExpirationBlockheight,_that.lockupTxId,_that.claimTxId,_that.refundTxId,_that.refundTxAmountSat);case _:
   return null;
@@ -3281,7 +3611,7 @@ return bitcoin(_that.swapId,_that.bitcoinAddress,_that.description,_that.autoAcc
 
 
 class PaymentDetails_Lightning extends PaymentDetails {
-  const PaymentDetails_Lightning({required this.swapId, required this.description, required this.liquidExpirationBlockheight, this.preimage, this.invoice, this.bolt12Offer, this.paymentHash, this.destinationPubkey, this.lnurlInfo, this.bip353Address, this.payerNote, this.claimTxId, this.refundTxId, this.refundTxAmountSat}): super._();
+  const PaymentDetails_Lightning({required this.swapId, required this.description, required this.liquidExpirationBlockheight, this.preimage, this.invoice, this.bolt12Offer, this.paymentHash, this.destinationPubkey, this.lnurlInfo, this.bip353Address, this.payerNote, this.claimTxId, this.refundTxId, this.refundTxAmountSat, this.settledAt}): super._();
   
 
  final  String swapId;
@@ -3298,6 +3628,7 @@ class PaymentDetails_Lightning extends PaymentDetails {
  final  String? claimTxId;
  final  String? refundTxId;
  final  BigInt? refundTxAmountSat;
+ final  int? settledAt;
 
 /// Create a copy of PaymentDetails
 /// with the given fields replaced by the non-null parameter values.
@@ -3309,16 +3640,16 @@ $PaymentDetails_LightningCopyWith<PaymentDetails_Lightning> get copyWith => _$Pa
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PaymentDetails_Lightning&&(identical(other.swapId, swapId) || other.swapId == swapId)&&(identical(other.description, description) || other.description == description)&&(identical(other.liquidExpirationBlockheight, liquidExpirationBlockheight) || other.liquidExpirationBlockheight == liquidExpirationBlockheight)&&(identical(other.preimage, preimage) || other.preimage == preimage)&&(identical(other.invoice, invoice) || other.invoice == invoice)&&(identical(other.bolt12Offer, bolt12Offer) || other.bolt12Offer == bolt12Offer)&&(identical(other.paymentHash, paymentHash) || other.paymentHash == paymentHash)&&(identical(other.destinationPubkey, destinationPubkey) || other.destinationPubkey == destinationPubkey)&&(identical(other.lnurlInfo, lnurlInfo) || other.lnurlInfo == lnurlInfo)&&(identical(other.bip353Address, bip353Address) || other.bip353Address == bip353Address)&&(identical(other.payerNote, payerNote) || other.payerNote == payerNote)&&(identical(other.claimTxId, claimTxId) || other.claimTxId == claimTxId)&&(identical(other.refundTxId, refundTxId) || other.refundTxId == refundTxId)&&(identical(other.refundTxAmountSat, refundTxAmountSat) || other.refundTxAmountSat == refundTxAmountSat));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PaymentDetails_Lightning&&(identical(other.swapId, swapId) || other.swapId == swapId)&&(identical(other.description, description) || other.description == description)&&(identical(other.liquidExpirationBlockheight, liquidExpirationBlockheight) || other.liquidExpirationBlockheight == liquidExpirationBlockheight)&&(identical(other.preimage, preimage) || other.preimage == preimage)&&(identical(other.invoice, invoice) || other.invoice == invoice)&&(identical(other.bolt12Offer, bolt12Offer) || other.bolt12Offer == bolt12Offer)&&(identical(other.paymentHash, paymentHash) || other.paymentHash == paymentHash)&&(identical(other.destinationPubkey, destinationPubkey) || other.destinationPubkey == destinationPubkey)&&(identical(other.lnurlInfo, lnurlInfo) || other.lnurlInfo == lnurlInfo)&&(identical(other.bip353Address, bip353Address) || other.bip353Address == bip353Address)&&(identical(other.payerNote, payerNote) || other.payerNote == payerNote)&&(identical(other.claimTxId, claimTxId) || other.claimTxId == claimTxId)&&(identical(other.refundTxId, refundTxId) || other.refundTxId == refundTxId)&&(identical(other.refundTxAmountSat, refundTxAmountSat) || other.refundTxAmountSat == refundTxAmountSat)&&(identical(other.settledAt, settledAt) || other.settledAt == settledAt));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,swapId,description,liquidExpirationBlockheight,preimage,invoice,bolt12Offer,paymentHash,destinationPubkey,lnurlInfo,bip353Address,payerNote,claimTxId,refundTxId,refundTxAmountSat);
+int get hashCode => Object.hash(runtimeType,swapId,description,liquidExpirationBlockheight,preimage,invoice,bolt12Offer,paymentHash,destinationPubkey,lnurlInfo,bip353Address,payerNote,claimTxId,refundTxId,refundTxAmountSat,settledAt);
 
 @override
 String toString() {
-  return 'PaymentDetails.lightning(swapId: $swapId, description: $description, liquidExpirationBlockheight: $liquidExpirationBlockheight, preimage: $preimage, invoice: $invoice, bolt12Offer: $bolt12Offer, paymentHash: $paymentHash, destinationPubkey: $destinationPubkey, lnurlInfo: $lnurlInfo, bip353Address: $bip353Address, payerNote: $payerNote, claimTxId: $claimTxId, refundTxId: $refundTxId, refundTxAmountSat: $refundTxAmountSat)';
+  return 'PaymentDetails.lightning(swapId: $swapId, description: $description, liquidExpirationBlockheight: $liquidExpirationBlockheight, preimage: $preimage, invoice: $invoice, bolt12Offer: $bolt12Offer, paymentHash: $paymentHash, destinationPubkey: $destinationPubkey, lnurlInfo: $lnurlInfo, bip353Address: $bip353Address, payerNote: $payerNote, claimTxId: $claimTxId, refundTxId: $refundTxId, refundTxAmountSat: $refundTxAmountSat, settledAt: $settledAt)';
 }
 
 
@@ -3329,7 +3660,7 @@ abstract mixin class $PaymentDetails_LightningCopyWith<$Res> implements $Payment
   factory $PaymentDetails_LightningCopyWith(PaymentDetails_Lightning value, $Res Function(PaymentDetails_Lightning) _then) = _$PaymentDetails_LightningCopyWithImpl;
 @override @useResult
 $Res call({
- String swapId, String description, int liquidExpirationBlockheight, String? preimage, String? invoice, String? bolt12Offer, String? paymentHash, String? destinationPubkey, LnUrlInfo? lnurlInfo, String? bip353Address, String? payerNote, String? claimTxId, String? refundTxId, BigInt? refundTxAmountSat
+ String swapId, String description, int liquidExpirationBlockheight, String? preimage, String? invoice, String? bolt12Offer, String? paymentHash, String? destinationPubkey, LnUrlInfo? lnurlInfo, String? bip353Address, String? payerNote, String? claimTxId, String? refundTxId, BigInt? refundTxAmountSat, int? settledAt
 });
 
 
@@ -3346,7 +3677,7 @@ class _$PaymentDetails_LightningCopyWithImpl<$Res>
 
 /// Create a copy of PaymentDetails
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? swapId = null,Object? description = null,Object? liquidExpirationBlockheight = null,Object? preimage = freezed,Object? invoice = freezed,Object? bolt12Offer = freezed,Object? paymentHash = freezed,Object? destinationPubkey = freezed,Object? lnurlInfo = freezed,Object? bip353Address = freezed,Object? payerNote = freezed,Object? claimTxId = freezed,Object? refundTxId = freezed,Object? refundTxAmountSat = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? swapId = null,Object? description = null,Object? liquidExpirationBlockheight = null,Object? preimage = freezed,Object? invoice = freezed,Object? bolt12Offer = freezed,Object? paymentHash = freezed,Object? destinationPubkey = freezed,Object? lnurlInfo = freezed,Object? bip353Address = freezed,Object? payerNote = freezed,Object? claimTxId = freezed,Object? refundTxId = freezed,Object? refundTxAmountSat = freezed,Object? settledAt = freezed,}) {
   return _then(PaymentDetails_Lightning(
 swapId: null == swapId ? _self.swapId : swapId // ignore: cast_nullable_to_non_nullable
 as String,description: null == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
@@ -3362,7 +3693,8 @@ as String?,payerNote: freezed == payerNote ? _self.payerNote : payerNote // igno
 as String?,claimTxId: freezed == claimTxId ? _self.claimTxId : claimTxId // ignore: cast_nullable_to_non_nullable
 as String?,refundTxId: freezed == refundTxId ? _self.refundTxId : refundTxId // ignore: cast_nullable_to_non_nullable
 as String?,refundTxAmountSat: freezed == refundTxAmountSat ? _self.refundTxAmountSat : refundTxAmountSat // ignore: cast_nullable_to_non_nullable
-as BigInt?,
+as BigInt?,settledAt: freezed == settledAt ? _self.settledAt : settledAt // ignore: cast_nullable_to_non_nullable
+as int?,
   ));
 }
 
